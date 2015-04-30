@@ -28,8 +28,19 @@ public class SuggestionServlet extends HttpServlet
 		
 		//compare each name in the names array with the user input pattern and when a matching name is found send that in the response
 			
+			for (String name:names) {
+			    match=inputPattern.matcher(name.toLowerCase());
+			    if (match.find()) {
+			    	out.print(name+" ");
+			    	found++;
+			    }
+			}
+
+			if (found<1) out.println("empty");
+
+		// out.println(typed);
 				
 
 	}
 	
-}	
+}

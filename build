@@ -1,0 +1,7 @@
+#!/bin/bash
+
+javac -cp ./WEB-INF/lib/* ./WEB-INF/src/sBox/*.java
+mv ./WEB-INF/src/sBox/*.class ./WEB-INF/classes/sBox/
+    
+../../bin/shutdown.sh
+../../bin/startup.sh
